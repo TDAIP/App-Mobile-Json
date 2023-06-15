@@ -1,0 +1,404 @@
+local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+function MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+
+data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+local OrionLib = loadstring(game:HttpGet((MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('nLOQishMktLDSFHbcGCXOvvOLbtNXsziOXKpGZLBOeRIzDXsUaqJacjaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3NobGV4d2FyZS9Pcmlvbi9tYWluL3NvdXJjZQ=='))))()
+local Window = OrionLib:MakeWindow({Name = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('qIfmudMcHkPAWHFmUMFzMpUMCsPthMSScxyVipxhtLyhQBNXRelmRrIU3ByaURvcyBUb3AgMSB8IFRyw60gR8OhbmggVGVhbQ==')})
+
+
+-- Variables
+local plr = game.Players.LocalPlayer
+local char = plr.Character
+
+
+local cam = workspace.CurrentCamera
+local uis = game:GetService(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('ivDJrxsxWfxcJcxwqumCpkcjWdyWTPHPzWAzQaBLlHNqnthaJFJdkvCVXNlcklucHV0U2VydmljZQ=='))
+
+
+
+
+local Main = Window:MakeTab({
+	Name = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('KKjEywRpdOUEvxcpDbZGzXSjIPkmdwmnwpXknnJvqWtnXRhJtWlCFIlTWFpbg=='),
+	Icon = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('IyRdHzqWAdyUHCQZBMItbpYeiSaFHsIdDvCDCQQvIJoOXdfJUkbYTmccmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	PremiumOnly = false
+})
+
+
+
+
+
+local Cred = Window:MakeTab({
+	Name = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('PYgJTJKgbXINISDcbAcXUKGQVgroUrOIjSHxHHqticyyxhrUyasPypuQ3JlZGl0cw=='),
+	Icon = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('qiJxZTFAgYoEEYCLEDzJSGNGxVNGchhbQKhxUtAblpXyJgCycDbcMyFcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	PremiumOnly = false
+})
+
+       Main:AddButton({
+	Name = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('oKgHiUmahAdqKJSZrVAVmgyLDWFZPuvyWsDxVepYCGYYtcTPvoBLPZeTm8gQ29vbGRvd24='),
+	Callback = function()
+local t = game:GetService(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('DrvLvKWHJwEPLjjoepmLOCGOyBohHJlaCZVAsMfafFIkWGScMEqtavqUmVwbGljYXRlZFN0b3JhZ2U='))[MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('fqIXdyMQJAEEotKETuGkCGHqJZftTFbUpbBfeNJbBUlyzbiLMxiMvZYU2hhcmVkX01vZHVsZXM=')].Tools[MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('CbuNsjkHXKyATTblBJpcLyMhVSOmXrBIwsmEGxAzRWmFvRggPyZJHayV2F2ZSAw')].Starfire[MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('SvqEvjsGrKKvozUZDzfXDKddWknqYrmQoNseQQFFMFHcHIqTsRSEbAyU2hhcmVkX1N0YXJCb2x0')]
+local w = require(t)
+w.DEBOUNCE = 0
+w.DAMAGE = 300
+
+
+
+--credits to the owner
+
+for i, v in pairs(game:GetService(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('PFZAXeEBTYoNABaBgcYGuZcfgCADPZFBGjpRvriKDSGsrOerSAPkuCLUmVwbGljYXRlZFN0b3JhZ2U='))[MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('CNjtDJJOaekJJqoBYEjJIwANSQtnpvFBsYVUXsCzcwEGukDVPRznwGYU2hhcmVkX01vZHVsZXM=')].Tools:GetDescendants()) do
+if v:IsA(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('BYyxCfDSZEPggRUcRMDqFavYTnbrrxJDvAPPYIYnJpNREDnosUnWNLfTW9kdWxlU2NyaXB0')) then
+local Module = require(v)
+Module.DEBOUNCE = 0
+Module.DAMAGE = 300
+end
+end
+
+local function API_Check()
+    if Drawing == nil then
+        return MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('mkQYIUlyAgjeScDdGbnSpSfzxBPOshhpMBeZBzmjJmrTsNKbmcSitaCTm8=')
+    else
+        return MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('DCCUjYmPoitnnLyXpyihgWNPZPWlAlhPRtVYlgAPlUSXFbYPyGVmVWMWWVz')
+    end
+end
+
+local Find_Required = API_Check()
+
+if Find_Required == MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('xMYqEVyBavSJtdCnlZHjfMHpYHUyxuJIKYcTWWzSTvNysVglBflDyOGTm8=') then
+    game:GetService(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('tZVpBbdqKeSSpwxSfBUhTGwIAhaWoIRFdUjYvXSWZViAxZCFgrUyQerU3RhcnRlckd1aQ==')):SetCore(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('cZcBEVJumSsOMvBtkrGiwBFNFlEHDFtluziwhteSqtoIHtFUNUCCLjLU2VuZE5vdGlmaWNhdGlvbg=='),{
+        Title = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('bjrpyyiFDEZrmVcMVmgqIWpzqlWbDYEJFNvGVfIKeVrRkNCDPacQbNsRXh1bnlzIERldmVsb3Blcg==');
+        Text = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('qVpojUCNWsBzqplPdMVzSyKZOVbEUVCNZwRQQnDYuuvMfaJKYTWrXQAVHJhY2VyIHNjcmlwdCBjb3VsZCBub3QgYmUgbG9hZGVkIGJlY2F1c2UgeW91ciBleHBsb2l0IGlzIHVuc3VwcG9ydGVkLg==');
+        Duration = math.huge;
+        Button1 = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('KqHRLvZAboSglTGqbKDWCTayNafXPqEsIkMHHYUGNhpcGCqmTJBYxyWT0s=')
+    })
+
+    return
+end
+
+
+end})
+    Main:AddButton({
+	Name = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('zjWozAChauprwlvLNimLJhKKEZxHjjseuRtfAikxHZtwiYcVlMFxLOoKFByZXNzIFYgT24vT2ZmKSBBdXRvIENsaWNr'),
+	Callback = function()
+    getgenv().Settings = {
+    [MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('ghdLDuXLkUtjaFWQzpiwkiTIqJEKMnhfwIzInnJItouBAzyHEzJnaaGQXV0byBDbGljayBLZXliaW5k')] = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('IBwxbmydjUonpeZadExPnDLVSfFxkItiaSUGTGnXIhBSGyYgvzIGXqYVg=='), -- Use an UpperCase letter or KeyCode Enum. Ex: Enum.KeyCode.Semicolon
+    [MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('xgHsuPmbFFOVkDpLqjMbyBhFIFMmWWzuXZSGFHLtlbQkCxwLbNsImtGTG9jayBNb3VzZSBQb3NpdGlvbiBLZXliaW5k')] = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('TaKdrUWxlJFGRUtlEAftIYNVloSCoeTbjJVkISEaTwLBgOEpadbzYREQg=='),
+    [MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('WSGWeoUZRgVpKsNBycBbvNsXZEvjrywKBCFHQbOBaRWykPXbwTzzHfkUmlnaHQgQ2xpY2s=')] = false,
+    [MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('ijIEwbvXTyDmJISzqjvLLaYaOQyAMQlzNhsihXKgrQaLaimduZZxJliR1VJ')] = false, -- A drawing gui that tells you what is going on with the autoclicker.
+    [MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('PIviBlvLDMuSPUgLcojeAQpRnbOHIgFwwpgvxRiqqzgwYNcqlqKjUeORGVsYXk=')] = 0 -- 0 for RenderStepped, other numbers go to regular wait timings.
+}
+loadstring(game:HttpGet(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('lNLZzyRHwrMhlMFyaevMDjtEXuZEyvjSNoxHOltjUuwTGpyEBqgGVKhaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0JpbWJ1c0NvZGVyL1NjcmlwdC9tYWluL0F1dG8lMjBDbGlja2VyLmx1YQ==')))()
+	    end})
+    
+      
+
+       Main:AddButton({
+	Name = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('YeJwfkpHmzjVHDqseySLODbHgJOkblETWCLFncHTYdXJMMHveRlyKhQSGl0Ym94ICsgVHJhY2Vycw=='),
+	Callback = function()
+local RunService = game:GetService(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('EQnIbDuVxaOTyXrRqPWMVNTulmTSkHaFzFzovEYDrJmIMrYINOYDRXCUnVuU2VydmljZQ=='))
+local Players = game:GetService(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('FHavCvVeYWyTHiBZXeScuVecBqozstRXiEivFBHWxOdSLYIiVTLkqjAUGxheWVycw=='))
+local Camera = game:GetService(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('VzUxFpfIJpWUdSIEMiVBrJyQokdEvhbkEzHIzDwuGnaLkLbpXeOvUVlV29ya3NwYWNl')).CurrentCamera
+local UserInputService = game:GetService(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('PuSztTjtjhrUHoCWDMlqwnMhESJLqMDxLrVbKTSIrCqUkBoopKYrEsFVXNlcklucHV0U2VydmljZQ=='))
+local TestService = game:GetService(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('vxenZyKUyAWuvypTElZBOkyirXqYmtOQfYtqqCSUDfaqHzkWLfyyMAIVGVzdFNlcnZpY2U='))
+
+local Typing = false
+
+_G.SendNotifications = true   -- If set to true then the script would notify you frequently on any changes applied and when loaded / errored. (If a game can detect this, it is recommended to set it to false)
+_G.DefaultSettings = false   -- If set to true then the tracer script would run with default settings regardless of any changes you made.
+
+_G.TeamCheck = false   -- If set to true then the script would create tracers only for the enemy team members.
+
+--[!]-- ONLY ONE OF THESE VALUES SHOULD BE SET TO TRUE TO NOT ERROR THE SCRIPT --[!]--
+
+_G.FromMouse = false   -- If set to true, the tracers will come from the position of your mouse curson on your screen.
+_G.FromCenter = false   -- If set to true, the tracers will come from the center of your screen.
+_G.FromBottom = true   -- If set to true, the tracers will come from the bottom of your screen.
+
+_G.TracersVisible = true   -- If set to true then the tracers will be visible and vice versa.
+_G.TracerColor = Color3.fromRGB(255, 80, 10)   -- The color that the tracers would appear as.
+_G.TracerThickness = 1   -- The thickness of the tracers.
+_G.TracerTransparency = 0.7   -- The transparency of the tracers.
+
+_G.ModeSkipKey = Enum.KeyCode.E   -- The key that changes between modes that indicate where will the tracers come from.
+_G.DisableKey = Enum.KeyCode.Q   -- The key that disables / enables the tracers.
+
+local function CreateTracers()
+    for _, v in next, Players:GetPlayers() do
+        if v.Name ~= game.Players.LocalPlayer.Name then
+            local TracerLine = Drawing.new(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('hpWVdAnWPWuPUuiQkPxpnymPrCsTMeqBwKgysWCAWdjBRFTrCyVZghUTGluZQ=='))
+    
+            RunService.RenderStepped:Connect(function()
+                if workspace:FindFirstChild(v.Name) ~= nil and workspace[v.Name]:FindFirstChild(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('xfhgTiKoQAZLjUzhuSHBevYsNDCjZaTkTHYTzwuBeaBGQDkTIALylGYSHVtYW5vaWRSb290UGFydA==')) ~= nil then
+                    local HumanoidRootPart_Position, HumanoidRootPart_Size = workspace[v.Name].HumanoidRootPart.CFrame, workspace[v.Name].HumanoidRootPart.Size * 1
+                    local Vector, OnScreen = Camera:WorldToViewportPoint(HumanoidRootPart_Position * CFrame.new(0, -HumanoidRootPart_Size.Y, 0).p)
+                    
+                    TracerLine.Thickness = _G.TracerThickness
+                    TracerLine.Transparency = _G.TracerTransparency
+                    TracerLine.Color = _G.TracerColor
+
+                    if _G.FromMouse == true and _G.FromCenter == false and _G.FromBottom == false then
+                        TracerLine.From = Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y)
+                    elseif _G.FromMouse == false and _G.FromCenter == true and _G.FromBottom == false then
+                        TracerLine.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+                    elseif _G.FromMouse == false and _G.FromCenter == false and _G.FromBottom == true then
+                        TracerLine.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y)
+                    end
+
+                    if OnScreen == true  then
+                        TracerLine.To = Vector2.new(Vector.X, Vector.Y)
+                        if _G.TeamCheck == true then 
+                            if Players.LocalPlayer.Team ~= v.Team then
+                                TracerLine.Visible = _G.TracersVisible
+                            else
+                                TracerLine.Visible = false
+                            end
+                        else
+                            TracerLine.Visible = _G.TracersVisible
+                        end
+                    else
+                        TracerLine.Visible = false
+                    end
+                else
+                    TracerLine.Visible = false
+                end
+            end)
+
+            Players.PlayerRemoving:Connect(function()
+                TracerLine.Visible = false
+            end)
+        end
+    end
+
+    Players.PlayerAdded:Connect(function(Player)
+        Player.CharacterAdded:Connect(function(v)
+            if v.Name ~= game.Players.LocalPlayer.Name then
+                local TracerLine = Drawing.new(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('gIaOvdYRbypnnDFpmXqXJUEoMrINYtdzwwBgaSqiQMWTbMOmvyMXaQBTGluZQ=='))
+        
+                RunService.RenderStepped:Connect(function()
+                    if workspace:FindFirstChild(v.Name) ~= nil and workspace[v.Name]:FindFirstChild(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('nkZbMPJnPnKWVjnkiaThToeojEhqSpGYaCJCQYznyuHphxbtYyytSieSHVtYW5vaWRSb290UGFydA==')) ~= nil then
+                        local HumanoidRootPart_Position, HumanoidRootPart_Size = workspace[v.Name].HumanoidRootPart.CFrame, workspace[v.Name].HumanoidRootPart.Size * 1
+                    	local Vector, OnScreen = Camera:WorldToViewportPoint(HumanoidRootPart_Position * CFrame.new(0, -HumanoidRootPart_Size.Y, 0).p)
+                        
+                        TracerLine.Thickness = _G.TracerThickness
+                        TracerLine.Transparency = _G.TracerTransparency
+                        TracerLine.Color = _G.TracerColor
+
+                        if _G.FromMouse == true and _G.FromCenter == false and _G.FromBottom == false then
+                            TracerLine.From = Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y)
+                        elseif _G.FromMouse == false and _G.FromCenter == true and _G.FromBottom == false then
+                            TracerLine.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y / 2)
+                        elseif _G.FromMouse == false and _G.FromCenter == false and _G.FromBottom == true then
+                            TracerLine.From = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y)
+                        end
+
+                        if OnScreen == true  then
+                            TracerLine.To = Vector2.new(Vector.X, Vector.Y)
+                            if _G.TeamCheck == true then 
+                                if Players.LocalPlayer.Team ~= Player.Team then
+                                    TracerLine.Visible = _G.TracersVisible
+                                else
+                                    TracerLine.Visible = false
+                                end
+                            else
+                                TracerLine.Visible = _G.TracersVisible
+                            end
+                        else
+                            TracerLine.Visible = false
+                        end
+                    else
+                        TracerLine.Visible = false
+                    end
+                end)
+
+                Players.PlayerRemoving:Connect(function()
+                    TracerLine.Visible = false
+                end)
+            end
+        end)
+    end)
+end
+
+UserInputService.TextBoxFocused:Connect(function()
+    Typing = true
+end)
+
+UserInputService.TextBoxFocusReleased:Connect(function()
+    Typing = false
+end)
+
+UserInputService.InputBegan:Connect(function(Input)
+    if Input.KeyCode == _G.ModeSkipKey and Typing == false then
+        if _G.FromMouse == true and _G.FromCenter == false and _G.FromBottom == false and _G.TracersVisible == true then
+            _G.FromCenter = false
+            _G.FromBottom = true
+            _G.FromMouse = false
+
+            if _G.SendNotifications == true then
+                game:GetService(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('EtkGvabMHSPqMUGoCpXGgXZcCyIeUqhJBSzGsAYXHqyltKMBxbaVdqaU3RhcnRlckd1aQ==')):SetCore(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('mPZgyzBAbGBWRyXcAKHdjfoPRyYMpWWNoFvGIthrGLpdiApOpSpnYSFU2VuZE5vdGlmaWNhdGlvbg=='),{
+                    Title = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('ZYLElwjbGpQebksRoqQsqOEPEDNJOoIDPQbKbQlZZwRhopXCkoLapJwRXh1bnlzIERldmVsb3Blcg==');
+                    Text = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('DOkQiySlRjkteRHfHRrcKSNhWHYrausXxeeNOqpkwMJACpgFAaiQfihVHJhY2VycyB3aWxsIGJlIG5vdyBjb21pbmcgZnJvbSB0aGUgYm90dG9tIG9mIHlvdXIgc2NyZWVuIChNb2RlIDEp');
+                    Duration = 5;
+                })
+            end
+        elseif _G.FromMouse == false and _G.FromCenter == false and _G.FromBottom == true and _G.TracersVisible == true then
+            _G.FromCenter = true
+            _G.FromBottom = false
+            _G.FromMouse = false
+
+            if _G.SendNotifications == true then
+                game:GetService(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('xAyMhTejtTqvjYZHYZdIjQUjbqTgCnjDCUpxjBSlPaFHQzZAKMAZoSHU3RhcnRlckd1aQ==')):SetCore(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('hXHxyHbNgJbRAxdMkeXYlKjBnZevgvsuBbLXZlHFqomMejEIGnrEHqsU2VuZE5vdGlmaWNhdGlvbg=='),{
+                    Title = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('WNRtlfLSEJphMkDzqmFspTEuKhYIlXYoEXGJlExzBDDRRnouPpFmIudRXh1bnlzIERldmVsb3Blcg==');
+                    Text = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('fDmXRkzTvIZWvdsQFDiloxpzWamjMXnosCEXwbOCEanVxjRrjQrjTGeVHJhY2VycyB3aWxsIGJlIG5vdyBjb21pbmcgZnJvbSB0aGUgY2VudGVyIG9mIHlvdXIgc2NyZWVuIChNb2RlIDIp');
+                    Duration = 5;
+                })
+            end
+        elseif _G.FromMouse == false and _G.FromCenter == true and _G.FromBottom == false and _G.TracersVisible == true then
+            _G.FromCenter = false
+            _G.FromBottom = false
+            _G.FromMouse = true
+
+            if _G.SendNotifications == true then
+                game:GetService(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('eVoZKvIVwJoWhcxobERqmlvklrbNXPRbgomEMhjoLmroZCqucWGSexrU3RhcnRlckd1aQ==')):SetCore(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('UOjxWgMEKvLSDWYHSQCJJLxJGtEXHRRoPDyBPzJkvwJGsFnxVQpFZGBU2VuZE5vdGlmaWNhdGlvbg=='),{
+                    Title = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('ShhYCSTIhCKNYOfaTgKxuOkrFAMqpfLlzMZbDGWcqIMXaCtzgnnfrOtRXh1bnlzIERldmVsb3Blcg==');
+                    Text = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('rhdObKvfeinDtWMlqRpYXMkAgmouURsfGgPcHrmjIclAQSmgNXyfnSpVHJhY2VycyB3aWxsIGJlIG5vdyBjb21pbmcgZnJvbSB0aGUgcG9zaXRpb24gb2YgeW91ciBtb3VzZSBjdXJzb3Igb24geW91ciBzY3JlZW4gKE1vZGUgMyk=');
+                    Duration = 5;
+                })
+            end
+        end
+    elseif Input.KeyCode == _G.DisableKey and Typing == false then
+        _G.TracersVisible = not _G.TracersVisible
+        
+        if _G.SendNotifications == true then
+            game:GetService(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('ILHwyOdSgpxRivNGHKmGDkAdTHkOBKKWNZCPrfmIZokSkXfVfElhbCKU3RhcnRlckd1aQ==')):SetCore(MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('tMiFZeEGnWYovDdYIEqCqtlbUAoKKLyjQEajkVDqkkXelCjEIkNTVfmU2VuZE5vdGlmaWNhdGlvbg=='),{
+                Title = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('REiVuMEzUvvbjfMeRxXqADVUCZaueUmFhxCNyiZqIBjzQjiAQxdvOTlRXh1bnlzIERldmVsb3Blcg==');
+                Text = MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('CmRAWGDVatBGsyqPTmTrwfwSdWWNzBLLIPPlUnugrwIuXDZLsaYjFmMVGhlIHRyYWNlcnM=') visibility is now set to MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('gWAGKDUEbjIEWvTpygcpVuwfACnVBWCIMdnOUiVKNFURwDVhXtCPZbRLi50b3N0cmluZyhfRy5UcmFjZXJzVmlzaWJsZSkuLg==').MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('zisbpRrRpagAuEpgmcwkdtOBQTJgJnQzWABXpzVKQVpNMDGjixYXJrHOw0KICAgICAgICAgICAgICAgIER1cmF0aW9uID0gNTsNCiAgICAgICAgICAgIH0pDQogICAgICAgIGVuZA0KICAgIGVuZA0KZW5kKQ0KDQppZiBfRy5EZWZhdWx0U2V0dGluZ3MgPT0gdHJ1ZSB0aGVuDQogICAgX0cuVGVhbUNoZWNrID0gZmFsc2UNCiAgICBfRy5Gcm9tTW91c2UgPSBmYWxzZQ0KICAgIF9HLkZyb21DZW50ZXIgPSBmYWxzZQ0KICAgIF9HLkZyb21Cb3R0b20gPSB0cnVlDQogICAgX0cuVHJhY2Vyc1Zpc2libGUgPSB0cnVlDQogICAgX0cuVHJhY2VyQ29sb3IgPSBDb2xvcjMuZnJvbVJHQig0MCwgOTAsIDI1NSkNCiAgICBfRy5UcmFjZXJUaGlja25lc3MgPSAxDQogICAgX0cuVHJhY2VyVHJhbnNwYXJlbmN5ID0gMC41DQogICAgX0cuTW9kZVNraXBLZXkgPSBFbnVtLktleUNvZGUuRQ0KICAgIF9HLkRpc2FibGVLZXkgPSBFbnVtLktleUNvZGUuUQ0KZW5kDQoNCmxvY2FsIFN1Y2Nlc3MsIEVycm9yZWQgPSBwY2FsbChmdW5jdGlvbigpDQogICAgQ3JlYXRlVHJhY2VycygpDQplbmQpDQoNCmlmIFN1Y2Nlc3MgYW5kIG5vdCBFcnJvcmVkIHRoZW4NCiAgICBpZiBfRy5TZW5kTm90aWZpY2F0aW9ucyA9PSB0cnVlIHRoZW4NCiAgICAgICAgZ2FtZTpHZXRTZXJ2aWNlKA==')StarterGuiMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('InNVtTZICdrctKfunoUaZooOOnfauHIxGlExhFcaBtxdYWUIFlmOweeKTpTZXRDb3JlKA==')SendNotificationMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('LcjBXFLMwzIOfHLyeOIMezeIMkyxWYmlioWolkKacOMfPRUiSAFzipULHsNCiAgICAgICAgICAgIFRpdGxlID0g')Exunys DeveloperMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('HvaEEXssHOMYGVEVhfQKMufFSdzYCdSgfHMwIWmgpaGFMwpjxBROTOjOw0KICAgICAgICAgICAgVGV4dCA9IA==')Tracer script has successfully loaded.MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('SUmohgpbUcEKhkJuRyfrrSRZDjAtXfqLFpJrIDEHjjGZojrRyyQfNCMOw0KICAgICAgICAgICAgRHVyYXRpb24gPSA1Ow0KICAgICAgICB9KQ0KICAgIGVuZA0KZWxzZWlmIEVycm9yZWQgYW5kIG5vdCBTdWNjZXNzIHRoZW4NCiAgICBpZiBfRy5TZW5kTm90aWZpY2F0aW9ucyA9PSB0cnVlIHRoZW4NCiAgICAgICAgZ2FtZTpHZXRTZXJ2aWNlKA==')StarterGuiMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('pDsFVOoHsZIzvhfRrdlvkEFLpaGMXolnYNtQzqOCLHbOeHjGAwLKyhjKTpTZXRDb3JlKA==')SendNotificationMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('fQhvSRdtmscsyDMJfvQvYVDiBykqexNKqsxIHqWPiBnxEGSlLCLBYYELHsNCiAgICAgICAgICAgIFRpdGxlID0g')Exunys DeveloperMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('nfgcBEVJBIKhOsftLRKJJCeZPuBPYLnmAqUFwqEPjNhPjhhbaKPHuBMOw0KICAgICAgICAgICAgVGV4dCA9IA==')Tracer script has errored while loading, please check the developer console! (F9)MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('DNcQCJmFPilxuurumaKyFICyMZLbiNazCslkfBVMNHQjJKPxKxyTOLhOw0KICAgICAgICAgICAgRHVyYXRpb24gPSA1Ow0KICAgICAgICB9KQ0KICAgIGVuZA0KICAgIFRlc3RTZXJ2aWNlOk1lc3NhZ2Uo')The tracer script has errored, please notify Exunys with the following information :MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('MMCsXgycaOmGiKNhoLPXGCdUUGuWYAhpqLFeuHhHaoOyyZtwiUTChqhKQ0KICAgIHdhcm4oRXJyb3JlZCkNCiAgICBwcmludCg=')!! IF THE ERROR IS A FALSE POSITIVE (says that a player cannot be found) THEN DO NOT BOTHER !!MhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('DguOfztRIUeFsEQzAHggDXltpVCdDfpvhMrRHPQKSIcHGMXWqEsrTAkKQ0KZW5kDQoNCglfRy5IZWFkU2l6ZSA9IDMwDQoNCglfRy5EaXNhYmxlZCA9IHRydWUNCg0KDQpnYW1lOkdldFNlcnZpY2Uo')RunServiceMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('VOpuLpBvqpVyRLxjUFcWqGdeKTSezZzQYULbQLbcfUWBLioCoEHJewCKS5SZW5kZXJTdGVwcGVkOmNvbm5lY3QoZnVuY3Rpb24oKQ0KCQlpZiBfRy5EaXNhYmxlZCB0aGVuDQoJCQlmb3IgaSx2IGluIG5leHQsIGdhbWU6R2V0U2VydmljZSg=')PlayersMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('mDmXPXaOYJBZxHsBtLnheAnCHuQSQagYHXYrYDvdSuDTsMYoeLMriEPKTpHZXRQbGF5ZXJzKCkgZG8NCgkJCQlpZiB2Lk5hbWUgfj0gZ2FtZTpHZXRTZXJ2aWNlKA==')PlayersMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('oxpTFCkIxMnTwfjTdRRiRAPrQQYpwmMKGmcuOyrRBbePLWDSnCDTyZnKS5Mb2NhbFBsYXllci5OYW1lIHRoZW4NCgkJCQkJcGNhbGwoZnVuY3Rpb24oKQ0KCQkJCQkJdi5DaGFyYWN0ZXIuSHVtYW5vaWRSb290UGFydC5TaXplID0gVmVjdG9yMy5uZXcoX0cuSGVhZFNpemUsX0cuSGVhZFNpemUsX0cuSGVhZFNpemUpDQoJCQkJCQl2LkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LlRyYW5zcGFyZW5jeSA9IDAuOA0KCQkJCQkJdi5DaGFyYWN0ZXIuSHVtYW5vaWRSb290UGFydC5Ccmlja0NvbG9yID0gQnJpY2tDb2xvci5uZXco')Really blackMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('pWlfJBXfcOkkgVyuPcMcuCzHkRlSNNPvmfoKMrMPLUFYrfUiZrCDOQsKQ0KCQkJCQkJdi5DaGFyYWN0ZXIuSHVtYW5vaWRSb290UGFydC5NYXRlcmlhbCA9IA==')NeonMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('AqMDIZCpaZVcofFXiQSJjihJZrXObaNmDDyEQvCjCmHZSsdHBmhrAXADQoJCQkJCQl2LkNoYXJhY3Rlci5IdW1hbm9pZFJvb3RQYXJ0LkNhbkNvbGxpZGUgPSBmYWxzZQ0KCQkJCQllbmQpDQoJCQkJZW5kDQoJCQllbmQNCgkJZW5kDQoJZW5kKQ0KCSAgICBlbmR9KQ0KDQogICAgTWFpbjpBZGRCdXR0b24oew0KCU5hbWUgPSA=')Player ESPMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('UpTUmuPtCglLIOIwXmYKPJcMVBswVWUqoBgIcIoqlZVOSceGxSwGzASLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KLS0gc2V0dGluZ3MNCmxvY2FsIHNldHRpbmdzID0gew0KICAgZGVmYXVsdGNvbG9yID0gQ29sb3IzLmZyb21SR0IoMjU1LDAsMCksDQogICB0ZWFtY2hlY2sgPSBmYWxzZSwNCiAgIHRlYW1jb2xvciA9IHRydWUNCn07DQoNCi0tIHNlcnZpY2VzDQpsb2NhbCBydW5TZXJ2aWNlID0gZ2FtZTpHZXRTZXJ2aWNlKA==')RunServiceMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('EhTQKZFbVdJAipxBTJmUcRBAyTahjKMzsedSgPBcIIRcXPkWmIMgNOXKTsNCmxvY2FsIHBsYXllcnMgPSBnYW1lOkdldFNlcnZpY2Uo')PlayersMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('ubQKqdnsscDuqIZbeobHnusEcThVPJDjkLxgqVZkPYEkAwXzYZTPrrIKTsNCg0KLS0gdmFyaWFibGVzDQpsb2NhbCBsb2NhbFBsYXllciA9IHBsYXllcnMuTG9jYWxQbGF5ZXI7DQpsb2NhbCBjYW1lcmEgPSB3b3Jrc3BhY2UuQ3VycmVudENhbWVyYTsNCg0KLS0gZnVuY3Rpb25zDQpsb2NhbCBuZXdWZWN0b3IyLCBuZXdDb2xvcjMsIG5ld0RyYXdpbmcgPSBWZWN0b3IyLm5ldywgQ29sb3IzLm5ldywgRHJhd2luZy5uZXc7DQpsb2NhbCB0YW4sIHJhZCA9IG1hdGgudGFuLCBtYXRoLnJhZDsNCmxvY2FsIHJvdW5kID0gZnVuY3Rpb24oLi4uKSBsb2NhbCBhID0ge307IGZvciBpLHYgaW4gbmV4dCwgdGFibGUucGFjayguLi4pIGRvIGFbaV0gPSBtYXRoLnJvdW5kKHYpOyBlbmQgcmV0dXJuIHVucGFjayhhKTsgZW5kOw0KbG9jYWwgd3R2cCA9IGZ1bmN0aW9uKC4uLikgbG9jYWwgYSwgYiA9IGNhbWVyYS5Xb3JsZFRvVmlld3BvcnRQb2ludChjYW1lcmEsIC4uLikgcmV0dXJuIG5ld1ZlY3RvcjIoYS5YLCBhLlkpLCBiLCBhLlogZW5kOw0KDQpsb2NhbCBlc3BDYWNoZSA9IHt9Ow0KbG9jYWwgZnVuY3Rpb24gY3JlYXRlRXNwKHBsYXllcikNCiAgIGxvY2FsIGRyYXdpbmdzID0ge307DQogICANCiAgIGRyYXdpbmdzLmJveCA9IG5ld0RyYXdpbmco')SquareMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('JemAuknOUIRiEvUvBdWCYSAJwrSprONqkgZYvvyVtNDjeAFXPULWDaZKTsNCiAgIGRyYXdpbmdzLmJveC5UaGlja25lc3MgPSAxOw0KICAgZHJhd2luZ3MuYm94LkZpbGxlZCA9IGZhbHNlOw0KICAgZHJhd2luZ3MuYm94LkNvbG9yID0gc2V0dGluZ3MuZGVmYXVsdGNvbG9yOw0KICAgZHJhd2luZ3MuYm94LlZpc2libGUgPSBmYWxzZTsNCiAgIGRyYXdpbmdzLmJveC5aSW5kZXggPSAyOw0KDQogICBkcmF3aW5ncy5ib3hvdXRsaW5lID0gbmV3RHJhd2luZyg=')SquareMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('oKIGbfWqXvvfnZxDkTTRNLPWoSBbvmaHqhLwodrbRiELauXHGQtuoCLKTsNCiAgIGRyYXdpbmdzLmJveG91dGxpbmUuVGhpY2tuZXNzID0gMzsNCiAgIGRyYXdpbmdzLmJveG91dGxpbmUuRmlsbGVkID0gZmFsc2U7DQogICBkcmF3aW5ncy5ib3hvdXRsaW5lLkNvbG9yID0gbmV3Q29sb3IzKCk7DQogICBkcmF3aW5ncy5ib3hvdXRsaW5lLlZpc2libGUgPSBmYWxzZTsNCiAgIGRyYXdpbmdzLmJveG91dGxpbmUuWkluZGV4ID0gMTsNCg0KICAgZXNwQ2FjaGVbcGxheWVyXSA9IGRyYXdpbmdzOw0KZW5kDQoNCmxvY2FsIGZ1bmN0aW9uIHJlbW92ZUVzcChwbGF5ZXIpDQogICBpZiByYXdnZXQoZXNwQ2FjaGUsIHBsYXllcikgdGhlbg0KICAgICAgIGZvciBfLCBkcmF3aW5nIGluIG5leHQsIGVzcENhY2hlW3BsYXllcl0gZG8NCiAgICAgICAgICAgZHJhd2luZzpSZW1vdmUoKTsNCiAgICAgICBlbmQNCiAgICAgICBlc3BDYWNoZVtwbGF5ZXJdID0gbmlsOw0KICAgZW5kDQplbmQNCg0KbG9jYWwgZnVuY3Rpb24gdXBkYXRlRXNwKHBsYXllciwgZXNwKQ0KICAgbG9jYWwgY2hhcmFjdGVyID0gcGxheWVyIGFuZCBwbGF5ZXIuQ2hhcmFjdGVyOw0KICAgaWYgY2hhcmFjdGVyIHRoZW4NCiAgICAgICBsb2NhbCBjZnJhbWUgPSBjaGFyYWN0ZXI6R2V0TW9kZWxDRnJhbWUoKTsNCiAgICAgICBsb2NhbCBwb3NpdGlvbiwgdmlzaWJsZSwgZGVwdGggPSB3dHZwKGNmcmFtZS5Qb3NpdGlvbik7DQogICAgICAgZXNwLmJveC5WaXNpYmxlID0gdmlzaWJsZTsNCiAgICAgICBlc3AuYm94b3V0bGluZS5WaXNpYmxlID0gdmlzaWJsZTsNCg0KICAgICAgIGlmIGNmcmFtZSBhbmQgdmlzaWJsZSB0aGVuDQogICAgICAgICAgIGxvY2FsIHNjYWxlRmFjdG9yID0gMSAvIChkZXB0aCAqIHRhbihyYWQoY2FtZXJhLkZpZWxkT2ZWaWV3IC8gMikpICogMikgKiAxMDAwOw0KICAgICAgICAgICBsb2NhbCB3aWR0aCwgaGVpZ2h0ID0gcm91bmQoNCAqIHNjYWxlRmFjdG9yLCA1ICogc2NhbGVGYWN0b3IpOw0KICAgICAgICAgICBsb2NhbCB4LCB5ID0gcm91bmQocG9zaXRpb24uWCwgcG9zaXRpb24uWSk7DQoNCiAgICAgICAgICAgZXNwLmJveC5TaXplID0gbmV3VmVjdG9yMih3aWR0aCwgaGVpZ2h0KTsNCiAgICAgICAgICAgZXNwLmJveC5Qb3NpdGlvbiA9IG5ld1ZlY3RvcjIocm91bmQoeCAtIHdpZHRoIC8gMiwgeSAtIGhlaWdodCAvIDIpKTsNCiAgICAgICAgICAgZXNwLmJveC5Db2xvciA9IHNldHRpbmdzLnRlYW1jb2xvciBhbmQgcGxheWVyLlRlYW1Db2xvci5Db2xvciBvciBzZXR0aW5ncy5kZWZhdWx0Y29sb3I7DQoNCiAgICAgICAgICAgZXNwLmJveG91dGxpbmUuU2l6ZSA9IGVzcC5ib3guU2l6ZTsNCiAgICAgICAgICAgZXNwLmJveG91dGxpbmUuUG9zaXRpb24gPSBlc3AuYm94LlBvc2l0aW9uOw0KICAgICAgIGVuZA0KICAgZWxzZQ0KICAgICAgIGVzcC5ib3guVmlzaWJsZSA9IGZhbHNlOw0KICAgICAgIGVzcC5ib3hvdXRsaW5lLlZpc2libGUgPSBmYWxzZTsNCiAgIGVuZA0KZW5kDQoNCi0tIG1haW4NCmZvciBfLCBwbGF5ZXIgaW4gbmV4dCwgcGxheWVyczpHZXRQbGF5ZXJzKCkgZG8NCiAgIGlmIHBsYXllciB+PSBsb2NhbFBsYXllciB0aGVuDQogICAgICAgY3JlYXRlRXNwKHBsYXllcik7DQogICBlbmQNCmVuZA0KDQpwbGF5ZXJzLlBsYXllckFkZGVkOkNvbm5lY3QoZnVuY3Rpb24ocGxheWVyKQ0KICAgY3JlYXRlRXNwKHBsYXllcik7DQplbmQpOw0KDQpwbGF5ZXJzLlBsYXllclJlbW92aW5nOkNvbm5lY3QoZnVuY3Rpb24ocGxheWVyKQ0KICAgcmVtb3ZlRXNwKHBsYXllcik7DQplbmQpDQoNCnJ1blNlcnZpY2U6QmluZFRvUmVuZGVyU3RlcCg=')espMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('IGLlzGomGfrjjscfqoRuAtylQCIAYTvWihbBEJOIOmIOkNluBOcqdQGLCBFbnVtLlJlbmRlclByaW9yaXR5LkNhbWVyYS5WYWx1ZSwgZnVuY3Rpb24oKQ0KICAgZm9yIHBsYXllciwgZHJhd2luZ3MgaW4gbmV4dCwgZXNwQ2FjaGUgZG8NCiAgICAgICBpZiBzZXR0aW5ncy50ZWFtY2hlY2sgYW5kIHBsYXllci5UZWFtID09IGxvY2FsUGxheWVyLlRlYW0gdGhlbg0KICAgICAgICAgICBjb250aW51ZTsNCiAgICAgICBlbmQNCg0KICAgICAgIGlmIGRyYXdpbmdzIGFuZCBwbGF5ZXIgfj0gbG9jYWxQbGF5ZXIgdGhlbg0KICAgICAgICAgICB1cGRhdGVFc3AocGxheWVyLCBkcmF3aW5ncyk7DQogICAgICAgZW5kDQogICBlbmQNCmVuZCkNCgkgICAgZW5kfSkNCglDcmVkOkFkZExhYmVsKA==')Made By: SpriDosMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('QUSUdclpbDBqXzObdmDXbHEvBXjqzZIIimcZPEpGMwjPxaxLcklkRrQKQ0KCQ0KQ3JlZDpBZGRUZXh0Ym94KHsNCglOYW1lID0g')Join DiscordMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('UnsZavVvejfFryGREstVHsikAsFUvAUNSuYpLUIaGncUnelFMNgOwLiLA0KCURlZmF1bHQgPSA=')https://discord.gg/dtQKPPCyfKMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('ibALRttEJQFZilnYoBHbUEuTqqOyEwuZWQIxkpXGezDGNhWVqhnDLBtLA0KCVRleHREaXNhcHBlYXIgPSB0cnVlLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oVmFsdWUpCQ0KCWVuZCAgDQp9KQ0KDQogIA0KDQoNCg0KICAgIA0KTWFpbjpBZGRUb2dnbGUoe05hbWUgPSA=')Infinite JumpMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('biEcDhBCHTDtpyDaRoyDwuftNOLMRFbzYOzeJdGFvnUaQWzSTXOybUeLCBEZWZhdWx0ID0gZmFsc2UsIENhbGxiYWNrID0gZnVuY3Rpb24odG9nKQ0KIGlmIHRvZyB0aGVuDQpfRy5pbmZpbmp1bXAgPSB0cnVlDQpsb2NhbCBQbGF5ZXIgPSBnYW1lOkdldFNlcnZpY2Uo')PlayersMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('dLJZYZEOTgweJwRbvvgGvvkafiWwKdQWzODLYhrgCkJFWusqORIIZxbKS5Mb2NhbFBsYXllcg0KbG9jYWwgTW91c2UgPSBQbGF5ZXI6R2V0TW91c2UoKQ0KTW91c2UuS2V5RG93bjpjb25uZWN0KGZ1bmN0aW9uKGspDQppZiBfRy5pbmZpbmp1bXAgdGhlbg0KaWYgazpieXRlKCkgPT0gMzIgdGhlbg0KSHVtYW5vaWQgPSBnYW1lOkdldFNlcnZpY2Uo')PlayersMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('KxJgvupqsMtHgvLGjhCkARhpoTbBtTPoJvdQORwLdHmVUplKVRSJWYEKS5Mb2NhbFBsYXllci5DaGFyYWN0ZXI6RmluZEZpcnN0Q2hpbGRPZkNsYXNzKA==')HumanoidMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('RfYuGjdGsjYXBbCdKNFgYbjyluSVMfslMECdKQEPYtRbodRAsracnPsKQ0KSHVtYW5vaWQ6Q2hhbmdlU3RhdGUo')JumpingMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('YzNxKKPNcdKhHHsGuClboVThiHwJRSLWNVYwuxiwGkNphQLlqRwgUNfKQ0Kd2FpdCgwLjEpDQpIdW1hbm9pZDpDaGFuZ2VTdGF0ZSg=')SeatedMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('hVOyVJusHVgwOrucXErjPjsqdFvxjBpXGHSQJRjxbqUONJoNVwpPaxIKQ0KZW5kDQplbmQNCmVuZCkNCmxvY2FsIFBsYXllciA9IGdhbWU6R2V0U2VydmljZSg=')PlayersMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('ekSXASYzvkDnLqTqKUGiCjfvrIqaWbByuhETZYcPpltEyQIEYTvzfxNKS5Mb2NhbFBsYXllcg0KbG9jYWwgTW91c2UgPSBQbGF5ZXI6R2V0TW91c2UoKQ0KICAgIGVsc2UNCmlmIF9HLmluZmluanVtcCA9PSB0cnVlIHRoZW4NCl9HLmluZmluanVtcCA9IGZhbHNlDQplbHNlDQpfRy5pbmZpbmp1bXAgPSB0cnVlDQplbmQNCmVuZA0KZW5kfSkNCg0KICAgIA0KICAgICAgDQoNCiAgICBNYWluOkFkZFNsaWRlcih7DQoJTmFtZSA9IA==')WalkSpeedMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('bLZeOkLrJQFkgNABlsououixiCrpPYMyLYGLhiQkWdhceQDRomepsANLA0KCU1pbiA9IDE2LA0KCU1heCA9IDUwMCwNCglEZWZhdWx0ID0gMiwNCglDb2xvciA9IENvbG9yMy5mcm9tUkdCKDI1NSwyNTUsMjU1KSwNCglJbmNyZW1lbnQgPSAxLA0KCVZhbHVlTmFtZSA9IA==')SpeedMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('TTqPgtfvzSrYIRYbNYpeIQCdAxaNQeMTVJkASFxfjHMOySREcVBBoevLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oVmFsdWUpDQogICBnZXRnZW52KCkuV2Fsa1NwZWVkVmFsdWUgPSAoVmFsdWUpOyAtLXNldCB5b3VyIGRlc2lyZWQgd2Fsa3NwZWVkIGhlcmUNCg0KbG9jYWwgUGxheWVyID0gZ2FtZTpzZXJ2aWNl')PlayersMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('lfeYlaWPeXvNvTxyPuNWppKILOGhcnxyeUNhdZxeJSjfuPfOGzRVWzJLkxvY2FsUGxheWVyOw0KUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZDpHZXRQcm9wZXJ0eUNoYW5nZWRTaWduYWw=')WalkSpeedMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('iWuEbUQaqwgptRNOjlckTtBPZiSpTrZdkBHNUksuLGOaobpXeCbSPsJOkNvbm5lY3QoZnVuY3Rpb24oKQ0KUGxheWVyLkNoYXJhY3Rlci5IdW1hbm9pZC5XYWxrU3BlZWQgPSBnZXRnZW52KCkuV2Fsa1NwZWVkVmFsdWU7DQplbmQpDQpQbGF5ZXIuQ2hhcmFjdGVyLkh1bWFub2lkLldhbGtTcGVlZCA9IGdldGdlbnYoKS5XYWxrU3BlZWRWYWx1ZTsNCgllbmR9KQ0KCQ0KCQ0KCQ0KICAgIE1haW46QWRkU2xpZGVyKHsNCglOYW1lID0g')JumpPowerMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('AGsrUIeWatlpswGnRxLLbMGKMWJrqkJoqwiJcwIAVcRJioZTpNXsktRLA0KCU1pbiA9IDUwLA0KCU1heCA9IDUwMCwNCglEZWZhdWx0ID0gMiwNCglDb2xvciA9IENvbG9yMy5mcm9tUkdCKDI1NSwyNTUsMjU1KSwNCglJbmNyZW1lbnQgPSAxLA0KCVZhbHVlTmFtZSA9IA==')PowerMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('HzTqySILAeOkSZjWgcThiyVwwgoVVKkOXlDvRWvWVqoSvyzKhitqNtCLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oVmFsdWUpDQpnYW1lLlBsYXllcnMuTG9jYWxQbGF5ZXIuQ2hhcmFjdGVyLkh1bWFub2lkLkp1bXBQb3dlciA9IChWYWx1ZSkNCgllbmR9KQ0KCQ0KCU1haW46QWRkQnV0dG9uKHsNCglOYW1lID0g')RejoinMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('vnKvASFdFKZsJEsSiHwUZMTpwFxiFRNZGaxQKrVmEZAgbQeGDFTiTnQLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KCSAgICAJICAgIHdhaXQoMSkNCgkgICAgZ2FtZTpHZXRTZXJ2aWNlKA==')TeleportServiceMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('xlueKkxNNIWKFVhdolKaRNqFLjMvwgeudMJxpdDESSubcJHdDybDHTEKTpUZWxlcG9ydCgzMDgyMDAyNzk4LCBMb2NhbFBsYXllcikNCgkgICAgDQoJICAgIGVuZH0pDQoJICAgIE1haW46QWRkQnV0dG9uKHsNCglOYW1lID0g')Server HopMhhEtBKnAbRDeLrFoYGGZBGlJMzJeoPUCKGgXhMhnqyAyNDSnBxbBhGZmVFrVdDsrJMILaAuUFLj('BOkWzTzLEOOxdcMINqqCEjpuagtSsNPEKGsAuJjOLjFoVAbmxUCAzVLLA0KCUNhbGxiYWNrID0gZnVuY3Rpb24oKQ0KCSAgICB3YWl0KDEpDQoJICAgIGdhbWU6R2V0U2VydmljZSg=')TeleportService'):Teleport(3082002798, LocalPlayer)
+	    
+	    end})
+
+
+    
